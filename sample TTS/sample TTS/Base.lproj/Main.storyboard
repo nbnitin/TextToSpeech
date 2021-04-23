@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zUt-0h-9Rh">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="sample_TTS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WeD-of-5qB">
+                                <rect key="frame" x="0.0" y="44.000000000000028" width="414" height="441.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="pnc-M6-2R8" detailTextLabel="TrU-GC-PGP" style="IBUITableViewCellStyleSubtitle" id="S7T-aB-lot">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="55.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S7T-aB-lot" id="9KR-pO-hiq">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="55.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pnc-M6-2R8">
+                                                    <rect key="frame" x="20" y="8.9999999999999982" width="33" height="20.333333333333332"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TrU-GC-PGP">
+                                                    <rect key="frame" x="19.999999999999996" y="31.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="v7f-Ny-mu5"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="hl5-yz-CkL"/>
+                                </connections>
+                            </tableView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ZYv-1f-IkM">
+                                <rect key="frame" x="20" y="519.66666666666663" width="376" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="DK2-T9-3ZR"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="rateSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Jwb-Bw-ozL"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWF-PO-rWJ">
+                                <rect key="frame" x="22" y="490.66666666666669" width="35" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="0mh-Yl-pDd"/>
+                                    <constraint firstAttribute="height" constant="21" id="8Jg-Ub-rgD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pitch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Plp-sm-v3U">
+                                <rect key="frame" x="22" y="577.66666666666663" width="39" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="e24-Er-yZE"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="39" id="rPT-Ct-gBC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KRq-0c-kfk">
+                                <rect key="frame" x="20" y="606.66666666666663" width="376" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="Asb-nO-zj9"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="pitchSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="kPS-Xw-e6Q"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KRq-0c-kfk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="4rF-tC-tVo"/>
+                            <constraint firstItem="ZYv-1f-IkM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="Ag7-DT-D8b"/>
+                            <constraint firstItem="WeD-of-5qB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="B5j-60-Y55"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KRq-0c-kfk" secondAttribute="trailing" constant="20" id="DM9-dR-lsz"/>
+                            <constraint firstItem="WeD-of-5qB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Dqu-0W-25k"/>
+                            <constraint firstItem="IWF-PO-rWJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="FMl-xr-cEi"/>
+                            <constraint firstItem="WeD-of-5qB" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.6" id="GL2-b2-ejK"/>
+                            <constraint firstItem="Plp-sm-v3U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="MfW-Gk-6rb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WeD-of-5qB" secondAttribute="trailing" id="Zhk-gx-rDJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZYv-1f-IkM" secondAttribute="trailing" constant="20" id="dyX-19-2vc"/>
+                            <constraint firstItem="ZYv-1f-IkM" firstAttribute="top" secondItem="IWF-PO-rWJ" secondAttribute="bottom" constant="8" id="ebG-Qq-HPW"/>
+                            <constraint firstItem="Plp-sm-v3U" firstAttribute="top" secondItem="ZYv-1f-IkM" secondAttribute="bottom" constant="29" id="nH5-WW-6dR"/>
+                            <constraint firstItem="KRq-0c-kfk" firstAttribute="top" secondItem="Plp-sm-v3U" secondAttribute="bottom" constant="8" id="tO3-QO-ktU"/>
+                            <constraint firstItem="IWF-PO-rWJ" firstAttribute="top" secondItem="WeD-of-5qB" secondAttribute="bottom" constant="5" id="ti4-2l-Plt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vEd-gd-Jv4"/>
+                    <connections>
+                        <outlet property="lblPitch" destination="Plp-sm-v3U" id="Dca-kT-AXV"/>
+                        <outlet property="lblRate" destination="IWF-PO-rWJ" id="Fpb-CT-rsG"/>
+                        <outlet property="pitchSlider" destination="KRq-0c-kfk" id="J11-Zc-DJH"/>
+                        <outlet property="rateSlider" destination="ZYv-1f-IkM" id="OM4-4v-G48"/>
+                        <outlet property="tbl" destination="WeD-of-5qB" id="heM-Rg-JhP"/>
+                        <segue destination="Pnl-Ep-q0i" kind="show" identifier="goToText" id="PTn-yE-Iw0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886.95652173913049" y="60.9375"/>
+        </scene>
+        <!--Text View Controller-->
+        <scene sceneID="Rzw-Ml-kzB">
+            <objects>
+                <viewController id="Pnl-Ep-q0i" customClass="TextViewController" customModule="sample_TTS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IHx-NI-PRY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vbo-sU-GcV">
+                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Fox
+By Margaret Wild and Ron Brooks
+Through the charred forest, over hot ash, runs Dog, with a bird clamped in his big, gentle mouth.
+He takes her to his cave above the river and there he tries to tend her burnt wing.
+But Magpie does not want his help.
+“I will never again be able to fly,” she whispers.
+“I know,” says Dog. He is silent for a moment, then he says, “I am blind in one eye, but
+life is still good.”
+“An eye is nothing!” says Magpie. “How would you feel if you couldn’t run?”
+Dog does not answer. Magpie drags her body into the shadow of the rocks, until she feels
+herself melting into blackness.
+Days, perhaps a week later, she wakes with a rush of grief. Dog is waiting. He persuades her to
+go with him to the riverbank.
+“Hop on my back,” he says. “Look into the water and tell me what you see.”
+Sighing, Magpie does as he asks. Reflected in the water are clouds and sky and trees—and
+something else.
+“I see a strange new creature!” she says.
+“That is us,” says Dog. “Now hold on tight!”
+With Magpie clinging to his back, he races through the scrub, past the stringybarks, past the
+clumps of yellow box trees, and into blueness. He runs so swiftly it is almost as if he were flying.
+Magpie feels the wind streaming through her feathers, and she rejoices. “FLY, Dog, FLY! I will
+be your missing eye, and you will be my wings.”
+And so Dog runs, with Magpie on his pack, every, through Summer, through Winter.
+After the rains, when saplings are springing up everywhere, a fox comes into the bush. Fox with
+his haunted eyes and rich red coat. He flickers through the trees like a tongue of fire, and
+Magpie trembles.
+But Dog says, “Welcome. We can offer you food and shelter.”
+“Thank you,” says Fox. “I saw you running this morning. You looked extraordinary.”
+Dog beams, but Magpie shrinks away. She can feel Fox staring at her burnt wing.
+In the evenings, when the air is creamy with blossom, Dog and Magpie relax at the mouth of the
+cave, enjoying each other’s company.
+Now and again Fox joins in the conversation, but Magpie can feel him watching, always
+watching her. And at night his smell seems to fill the cave—a smell of rage and envy and
+loneliness.
+Magpie tries to warn Dog about Fox. “He belongs nowhere,” she says. “He loves no one.”
+Fox
+By Margaret Wild and Ron Brooks
+But Dog says, “He’s all right. Let him be.”
+That night, when Dog is asleep, Fox whispers to Magpie, “I can run faster than Dog.” Faster than
+the wind. Leave Dog and come with me.”
+Magpie says, “I will never leave Dog. I am his missing eye and he is my wings.”
+Fox says no more that night, but the next day when Dog is at the river, he whispers to Magpie,
+“Do you remember what it is like to fly? Truly fly?”
+Again Magpie says, “I will never leave Dog. I am his missing eye and he is my wings.”
+But later that day, as Dog runs through the scrub with Magpie on his back, she thinks, “This is
+nothing like flying. Nothing!”
+And when at dawn Fox whispers to her for the third time, she whispers back, “I am ready.”
+While Dog sleeps, Magpie and Fox streak past coolibah trees, rip through long grass, pelt over
+rocks. Fox runs so fast that his feet scarcely touch the ground, and Magpie exults, “At last I am
+flying. Really flying!”
+Fox scorches through woodlands, through dusty plains, through salt pans, and out into the hot
+red desert. He stops, scarcely panting. There is silence between them. Neither moves, neither
+speaks. Then Fox shakes Magpie off his back as he would a flea, and pads away.
+He turns and looks at Magpie, and says, “Now you and Dog will know what it is like to be truly
+alone.”
+Then he is gone.
+In the stillness, Magpie hears a faraway scream. She cannot tell if it is a scream of triumph or
+despair.
+Magpie huddles, a scruff of feathers adrift in heat. She can feel herself burning into nothingness.
+It would be so easy just to die here in the desert.
+But then she thinks of Dog waking to find her gone.
+Slowly, jiggety-hop, she begins the long journey home.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5hx-z4-4hl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5hx-z4-4hl" firstAttribute="bottom" secondItem="vbo-sU-GcV" secondAttribute="bottom" id="8jy-Fr-s0i"/>
+                            <constraint firstItem="5hx-z4-4hl" firstAttribute="trailing" secondItem="vbo-sU-GcV" secondAttribute="trailing" id="Qgd-bq-hfR"/>
+                            <constraint firstItem="vbo-sU-GcV" firstAttribute="top" secondItem="5hx-z4-4hl" secondAttribute="top" id="mWs-oZ-ljZ"/>
+                            <constraint firstItem="vbo-sU-GcV" firstAttribute="leading" secondItem="5hx-z4-4hl" secondAttribute="leading" id="x49-zT-dec"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BGj-Dn-Elj"/>
+                    <connections>
+                        <outlet property="textView" destination="vbo-sU-GcV" id="kqb-Qh-WEg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Elh-5C-TDR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1637.68115942029" y="60.9375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6Bb-yB-MGh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zUt-0h-9Rh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TIs-IA-Rxh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3wi-IK-qJm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zOT-bw-3DY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="60.9375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
